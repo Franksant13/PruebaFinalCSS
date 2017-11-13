@@ -1,0 +1,161 @@
+body{
+    background-color:  #02010a;
+    font-family: 'Dancing Script', cursive;
+    animation: entradaAnimacion 1s;
+}
+#contenido{
+    max-width: 900px;
+    display: block;
+    margin: 0 auto;
+}
+header{
+    background-color: #5b7989;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 10px 5px 10px;
+}
+img{
+    box-shadow: 2px 2px  #02010a;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+}
+#navHeader{
+    flex-basis: 70%;
+}
+#navTittle h1{
+    color:white;
+    text-shadow: 2px 0 0 #02010a;
+}
+#navLinks{
+    flex-basis: 30%;
+    margin-top: 25px;
+    float: right;
+}
+#navLinks a{
+    color: white;
+    margin-right: 20px;
+    text-decoration: underline;
+}
+#navLinks a:active{
+    text-decoration: none;
+}
+#mainImage{
+    background-color: #82c3a6;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#mainImage img{
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+}
+#subImages{
+    display: flex;
+    flex-direction: row;
+    background-color: #d5c75f;
+}
+#subImages div{
+    flex-grow: 1;
+    text-align: center;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+#subImages img{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    transition: 1s;
+}
+#subImages .img1 img:hover{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px #82c3a6;
+}
+#subImages .img2 img:hover{
+    transform: translate(20px, -5px);
+    box-shadow: 2px 2px #82c3a6;
+}
+footer{
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    background-color: #C6d5c5;
+}
+footer div{
+    text-align: center;
+    flex-basis: 25%;
+}
+footer img{
+    box-shadow: none;
+    width: 30px;
+}
+
+/*///////////////Animacion de entrada//////*/
+@-webkit-keyframes entradaAnimacion {
+    0%   {margin-top: 150%;}
+    60%  {margin-top: -5%;}
+    100% {margin-top: 0%;}
+}
+
+/*///////////////Gallerias de paisajes y retratos//////*/
+.galleria{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.galleria div{
+    flex-basis: 33.33%;
+    padding: 20px 0 20px 0;
+}
+.galleria img{
+    width: 90%;
+}
+#img1 {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+#img3 {
+    -webkit-filter: sepia(90%);
+    filter: sepia(90%);
+}
+#img2, #img4, #img6{
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+/*////////Responsive//////*/
+@media(max-width: 900px) {
+    #contenido{
+        max-width:100%
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    #navHeader{
+        flex-basis: 100%;
+    }
+    #navLinks{
+        flex-basis: 100%;
+    }
+    #subImages {
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+    footer div{
+        text-align: left;
+        flex-basis: 100%;
+    }
+    .galleria{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .galleria div{
+        flex-basis: 33.33%;
+        padding: 20px 0 20px 0;
+    }
+}
